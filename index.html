@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harbour Labs</title>
-  <meta name="description" content="Harbour Labs is a software company in Wyoming. We make Dinnrd.">
+  <meta name="description" content="Harbour Labs is a Wyoming LLC building Dinnrd, an iPhone app for figuring out what's for dinner.">
   <meta property="og:title" content="Harbour Labs">
-  <meta property="og:description" content="A software company in Wyoming. We make Dinnrd.">
+  <meta property="og:description" content="A Wyoming LLC. Currently building Dinnrd.">
   <meta property="og:url" content="https://harbourlabs.co">
   <meta name="theme-color" content="#1D4D2E">
   <link rel="canonical" href="https://harbourlabs.co/">
@@ -73,7 +73,7 @@
     .hero {
       max-width: 760px;
       margin: 0 auto;
-      padding: 140px 28px 100px;
+      padding: 96px 28px 56px;
     }
 
     .hero h1 {
@@ -82,22 +82,23 @@
       line-height: 1.05;
       color: var(--green-dark);
       font-weight: 700;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       letter-spacing: -0.5px;
     }
 
     .hero .lede {
       font-size: 19px;
       color: var(--text-muted);
-      max-width: 540px;
-      line-height: 1.55;
+      max-width: 560px;
+      line-height: 1.6;
     }
+    .hero .lede + .lede { margin-top: 14px; }
 
     /* ── Section base ────────────────────────────────────────────────── */
     section {
       max-width: 760px;
       margin: 0 auto;
-      padding: 60px 28px;
+      padding: 48px 28px;
     }
 
     .section-label {
@@ -157,6 +158,38 @@
     }
     .product-link:hover { color: var(--green-dark); border-color: var(--green-dark); }
 
+    /* ── Notes ───────────────────────────────────────────────────────── */
+    #notes { border-top: 1px solid var(--rule); }
+
+    .notes-list {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      row-gap: 14px;
+      max-width: 520px;
+    }
+    .notes-list dt {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-top: 7px;
+    }
+    .notes-list dd {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      color: var(--green-dark);
+      line-height: 1.4;
+    }
+    @media (max-width: 480px) {
+      .notes-list {
+        grid-template-columns: 110px 1fr;
+        row-gap: 12px;
+      }
+      .notes-list dd { font-size: 16px; }
+    }
+
     /* ── Contact ─────────────────────────────────────────────────────── */
     #contact { border-top: 1px solid var(--rule); }
 
@@ -183,7 +216,7 @@
 
     /* ── Footer ──────────────────────────────────────────────────────── */
     footer {
-      margin-top: 80px;
+      margin-top: 56px;
       padding: 32px 28px;
       background: var(--green-dark);
     }
@@ -222,7 +255,8 @@
 
 <section class="hero">
   <h1>Harbour Labs.</h1>
-  <p class="lede">A software company in Wyoming, founded 2026. We make Dinnrd.</p>
+  <p class="lede">A Wyoming LLC, founded 2026. Currently building Dinnrd, an iPhone app for figuring out what's for dinner.</p>
+  <p class="lede">The studio is independently funded. Email reaches a real person, usually within two business days.</p>
 </section>
 
 <section id="products">
@@ -230,9 +264,20 @@
   <div class="product-entry">
     <h3>Dinnrd</h3>
     <p class="product-meta">iOS · 2026</p>
-    <p class="product-desc">An iPhone app for households. Plans the week's dinners, flags food before it spoils, and saves recipes from wherever you scroll.</p>
+    <p class="product-desc">A one-stop kitchen tool. Dinnrd plans your week's meals, uses up the food in your fridge before it spoils, and saves any recipe you scroll past — TikTok, Instagram, anywhere.</p>
     <a href="https://dinnrd.com" class="product-link" target="_blank" rel="noopener">dinnrd.com →</a>
   </div>
+</section>
+
+<section id="notes">
+  <div class="section-label">Notes</div>
+  <dl class="notes-list">
+    <dt>Founded</dt><dd>2026</dd>
+    <dt>Structure</dt><dd>Wyoming LLC</dd>
+    <dt>Funding</dt><dd>Independent, no outside investment</dd>
+    <dt>Products</dt><dd>One at a time, on purpose</dd>
+    <dt>Support</dt><dd>Replies within two business days</dd>
+  </dl>
 </section>
 
 <section id="contact">
