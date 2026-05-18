@@ -2,30 +2,33 @@
 
 Static website for Harbour Labs LLC, hosted on GitHub Pages at https://harbourlabs.co.
 
-## Structure
+## Files
 
-- `index.html` — home (hero, about, products, contact)
-- `contact.html` — contact details
-- `privacy.html` — company privacy policy
+- `index.html` — home (hero, products, contact)
+- `privacy.html` — privacy policy
 - `terms.html` — terms of service
 - `404.html` — not-found page
 - `robots.txt`, `sitemap.xml` — SEO basics
 - `CNAME` — custom domain config for GitHub Pages
 - `.nojekyll` — disables GitHub's Jekyll processing
 
-## Deploy
+## Editing
 
-Pushes to `main` are published automatically by GitHub Pages.
+Open the HTML files in any editor. No build step.
 
-To edit locally, just open the HTML files in your editor — no build step.
+To publish a change:
+
+```
+git add .
+git commit -m "describe the change"
+git push
+```
+
+GitHub Pages rebuilds within ~60 seconds.
 
 ## Domain
 
-Custom domain `harbourlabs.co` is set via the `CNAME` file. DNS:
+Custom domain `harbourlabs.co` is set via the `CNAME` file. DNS at Namecheap:
 
-- Apex (`@`) → A records pointing to GitHub Pages:
-  - 185.199.108.153
-  - 185.199.109.153
-  - 185.199.110.153
-  - 185.199.111.153
-- `www` → CNAME to `<github-username>.github.io`
+- Apex (`@`) → A records: 185.199.108.153, .109.153, .110.153, .111.153
+- `www` → CNAME to `hqqq753-dev.github.io.`
