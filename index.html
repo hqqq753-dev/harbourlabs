@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harbour Labs — Independent software studio</title>
+  <meta name="description" content="Harbour Labs is an independent software studio building practical consumer apps. Maker of Dinnrd.">
+  <meta property="og:title" content="Harbour Labs">
+  <meta property="og:description" content="Independent software studio. Maker of Dinnrd.">
+  <meta property="og:url" content="https://harbourlabs.co">
+  <meta name="theme-color" content="#1D4D2E">
+  <link rel="canonical" href="https://harbourlabs.co/">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:       #FAF7F2;
+      --green-dark:  #1D4D2E;
+      --green-soft:  #2D6A3F;
+      --green-muted: #a8c4b0;
+      --orange:      #C4622D;
+      --text-dark:   #1A1A1A;
+      --text-muted:  #6B6B6B;
+      --rule:        rgba(29,77,46,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    /* ── Site header ─────────────────────────────────────────────────── */
+    .site-header {
+      background: var(--green-dark);
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wordmark {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .wordmark span { color: var(--orange); }
+
+    .nav {
+      display: flex;
+      gap: 28px;
+    }
+    .nav a {
+      font-size: 14px;
+      color: var(--green-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .nav a:hover { color: var(--cream); }
+
+    @media (max-width: 540px) {
+      .nav { gap: 18px; }
+      .nav a { font-size: 13px; }
+    }
+
+    /* ── Hero ────────────────────────────────────────────────────────── */
+    .hero {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      text-align: left;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      color: var(--orange);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.1;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero .lede {
+      font-size: 19px;
+      color: var(--text-muted);
+      max-width: 620px;
+      line-height: 1.6;
+    }
+
+    /* ── Section base ────────────────────────────────────────────────── */
+    section {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      color: var(--orange);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 4vw, 36px);
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.3px;
+    }
+
+    p { font-size: 17px; color: var(--text-dark); margin-bottom: 16px; max-width: 680px; }
+    p.muted { color: var(--text-muted); }
+
+    /* ── About ───────────────────────────────────────────────────────── */
+    #about {
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ── Products ────────────────────────────────────────────────────── */
+    #products {
+      border-top: 1px solid var(--rule);
+    }
+
+    .product-card {
+      margin-top: 24px;
+      padding: 32px;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    .product-mark {
+      flex-shrink: 0;
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      background: var(--green-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--cream);
+    }
+    .product-mark .accent { color: var(--orange); }
+
+    .product-body { flex: 1; }
+    .product-body h3 {
+      font-family: Georgia, serif;
+      font-size: 22px;
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+    .product-body .product-tag {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .product-body p {
+      font-size: 15.5px;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+
+    .product-link {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--green-soft);
+      text-decoration: none;
+      border-bottom: 1px solid var(--green-soft);
+      padding-bottom: 1px;
+    }
+    .product-link:hover { color: var(--green-dark); border-color: var(--green-dark); }
+
+    @media (max-width: 540px) {
+      .product-card { flex-direction: column; gap: 18px; padding: 24px; }
+    }
+
+    /* ── Contact ─────────────────────────────────────────────────────── */
+    #contact {
+      border-top: 1px solid var(--rule);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 24px;
+    }
+    @media (max-width: 600px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+    }
+
+    .contact-block h4 {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .contact-block p, .contact-block a {
+      font-size: 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      line-height: 1.55;
+    }
+    .contact-block a:hover { color: var(--green-soft); text-decoration: underline; }
+
+    /* ── Footer ──────────────────────────────────────────────────────── */
+    footer {
+      background: var(--green-dark);
+      padding: 48px 24px 32px;
+      margin-top: 60px;
+    }
+    .footer-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-brand .wordmark { font-size: 18px; }
+    .footer-brand p {
+      font-size: 12px;
+      color: var(--green-muted);
+      margin-top: 8px;
+      max-width: 280px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--green-muted);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--cream); text-decoration: underline; }
+    .footer-bottom {
+      max-width: 880px;
+      margin: 32px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(168,196,176,0.15);
+      font-size: 12px;
+      color: var(--green-muted);
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="wordmark">Harbour<span>.</span>Labs</a>
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Harbour Labs LLC</div>
+  <h1>An independent software studio.</h1>
+  <p class="lede">We build practical consumer apps for people who'd rather spend less time on the boring parts of life. Based in Wyoming, shipping worldwide.</p>
+</section>
+
+<section id="about">
+  <div class="section-label">About</div>
+  <h2>Small studio, focused work.</h2>
+  <p>Harbour Labs is an independent software studio. We build a small number of apps and stand behind each one. We don't take advertising, we don't sell user data, and we don't ship things we wouldn't use ourselves.</p>
+  <p class="muted">The studio is registered as Harbour Labs LLC in Wyoming, United States, and operates as a single-product company while our first app finds its audience.</p>
+</section>
+
+<section id="products">
+  <div class="section-label">Products</div>
+  <h2>What we make.</h2>
+  <p class="muted">Our current focus.</p>
+
+  <div class="product-card">
+    <div class="product-mark">D<span class="accent">.</span></div>
+    <div class="product-body">
+      <h3>Dinnrd</h3>
+      <div class="product-tag">iOS · Meal planning · 2026</div>
+      <p>Dinnrd plans dinners for your whole household, flags food before it spoils, and saves recipes from anywhere you scroll. Built for people who want to eat well at home without staring at the fridge for ten minutes every night.</p>
+      <a href="https://dinnrd.com" class="product-link" target="_blank" rel="noopener">Visit dinnrd.com →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <h2>Get in touch.</h2>
+  <p class="muted">For press, partnerships, support, or anything else.</p>
+
+  <div class="contact-grid">
+    <div class="contact-block">
+      <h4>General &amp; press</h4>
+      <a href="mailto:hello@harbourlabs.co">hello@harbourlabs.co</a>
+    </div>
+    <div class="contact-block">
+      <h4>Product support</h4>
+      <a href="mailto:support@harbourlabs.co">support@harbourlabs.co</a>
+    </div>
+    <div class="contact-block">
+      <h4>Mailing address</h4>
+      <p>
+        Harbour Labs LLC<br>
+        c/o Northwest Registered Agent<br>
+        30 N Gould St, Ste R<br>
+        Sheridan, WY 82801<br>
+        United States
+      </p>
+    </div>
+    <div class="contact-block">
+      <h4>Legal entity</h4>
+      <p>
+        Harbour Labs LLC<br>
+        Wyoming Limited Liability Company
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="wordmark">Harbour<span>.</span>Labs</a>
+      <p>Independent software studio based in Wyoming.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/#about">About</a>
+      <a href="/#products">Products</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Harbour Labs LLC. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
