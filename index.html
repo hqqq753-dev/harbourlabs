@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harbour Labs</title>
-  <meta name="description" content="Harbour Labs is a Wyoming LLC building Dinnrd, an iPhone app for figuring out what's for dinner.">
+  <meta name="description" content="Harbour Labs is a Wyoming LLC. The studio publishes Dinnrd, a meal-planning app for iPhone.">
   <meta property="og:title" content="Harbour Labs">
-  <meta property="og:description" content="A Wyoming LLC. Currently building Dinnrd.">
+  <meta property="og:description" content="A Wyoming LLC. Publisher of Dinnrd.">
   <meta property="og:url" content="https://harbourlabs.co">
   <meta name="theme-color" content="#1D4D2E">
   <link rel="canonical" href="https://harbourlabs.co/">
@@ -158,8 +158,16 @@
     }
     .product-link:hover { color: var(--green-dark); border-color: var(--green-dark); }
 
-    /* ── Notes ───────────────────────────────────────────────────────── */
-    #notes { border-top: 1px solid var(--rule); }
+    /* Inline Dinnrd link — no underline, hover shifts to orange */
+    .dinnrd-link {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .dinnrd-link:hover { color: var(--orange); }
+
+    /* ── Company ─────────────────────────────────────────────────────── */
+    #company { border-top: 1px solid var(--rule); }
 
     .notes-list {
       margin-top: 28px;
@@ -248,35 +256,32 @@
 <header class="site-header">
   <a href="/" class="wordmark">Harbour Labs</a>
   <nav class="nav">
-    <a href="#products">Products</a>
+    <a href="#products">Currently</a>
+    <a href="#company">Company</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
   <h1>Harbour Labs.</h1>
-  <p class="lede">A Wyoming LLC, founded 2026. Currently building Dinnrd, an iPhone app for figuring out what's for dinner.</p>
-  <p class="lede">The studio is independently funded. Email reaches a real person, usually within two business days.</p>
+  <p class="lede">A Wyoming LLC, formed 2026. The studio publishes <a href="https://dinnrd.com" class="dinnrd-link" target="_blank" rel="noopener">Dinnrd</a>, a meal-planning app for iPhone.</p>
 </section>
 
 <section id="products">
   <div class="section-label">Currently</div>
   <div class="product-entry">
-    <h3>Dinnrd</h3>
+    <h3><a href="https://dinnrd.com" class="dinnrd-link" target="_blank" rel="noopener">Dinnrd</a></h3>
     <p class="product-meta">iOS · 2026</p>
     <p class="product-desc">A one-stop kitchen tool. Dinnrd plans your week's meals, uses up the food in your fridge before it spoils, and saves any recipe you scroll past — TikTok, Instagram, anywhere.</p>
     <a href="https://dinnrd.com" class="product-link" target="_blank" rel="noopener">dinnrd.com →</a>
   </div>
 </section>
 
-<section id="notes">
-  <div class="section-label">Notes</div>
+<section id="company">
+  <div class="section-label">Company</div>
   <dl class="notes-list">
     <dt>Founded</dt><dd>2026</dd>
     <dt>Structure</dt><dd>Wyoming LLC</dd>
-    <dt>Funding</dt><dd>Independent, no outside investment</dd>
-    <dt>Products</dt><dd>One at a time, on purpose</dd>
-    <dt>Support</dt><dd>Replies within two business days</dd>
   </dl>
 </section>
 
