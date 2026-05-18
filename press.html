@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Press — Harbour Labs</title>
+  <meta name="description" content="Press resources for Harbour Labs: company description, quick facts, brand colors, contact.">
+  <meta name="theme-color" content="#1D4D2E">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:       #FAF7F2;
+      --green-dark:  #1D4D2E;
+      --green-soft:  #2D6A3F;
+      --green-muted: #a8c4b0;
+      --orange:      #C4622D;
+      --text-dark:   #1A1A1A;
+      --text-muted:  #6B6B6B;
+      --rule:        rgba(29,77,46,0.14);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+
+    .site-header {
+      background: var(--green-dark);
+      padding: 0 28px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .nav { display: flex; gap: 24px; }
+    .nav a { font-size: 14px; color: var(--green-muted); text-decoration: none; transition: color 0.15s ease; }
+    .nav a:hover { color: var(--cream); }
+    @media (max-width: 600px) { .nav { gap: 16px; } .nav a { font-size: 13px; } }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 28px 60px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 5vw, 48px);
+      line-height: 1.1;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 22px;
+      letter-spacing: -0.4px;
+    }
+
+    .lede {
+      font-size: 19px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .desc-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16.5px;
+      color: var(--text-dark);
+      line-height: 1.65;
+      margin-bottom: 14px;
+      max-width: 640px;
+    }
+
+    .quoted {
+      background: rgba(45,106,63,0.04);
+      border-left: 2px solid var(--green-soft);
+      padding: 14px 18px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-dark);
+      max-width: 640px;
+      margin-bottom: 16px;
+    }
+
+    dl.facts {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      row-gap: 12px;
+      column-gap: 24px;
+      max-width: 560px;
+      margin-top: 8px;
+    }
+    dl.facts dt {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-top: 4px;
+    }
+    dl.facts dd {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      color: var(--green-dark);
+      line-height: 1.45;
+    }
+    dl.facts dd a {
+      color: var(--green-soft);
+      text-decoration: none;
+      border-bottom: 1px solid var(--green-soft);
+      padding-bottom: 1px;
+    }
+    dl.facts dd a:hover { color: var(--green-dark); border-color: var(--green-dark); }
+    @media (max-width: 460px) {
+      dl.facts { grid-template-columns: 100px 1fr; column-gap: 16px; }
+      dl.facts dd { font-size: 15px; }
+    }
+
+    .swatches {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px 10px 10px;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+    }
+    .swatch-color {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .swatch-text {
+      font-size: 13px;
+      line-height: 1.3;
+    }
+    .swatch-name {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+    .swatch-hex {
+      color: var(--text-muted);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 12px;
+    }
+
+    .inline {
+      color: var(--green-soft);
+      text-decoration: none;
+      border-bottom: 1px solid var(--green-soft);
+      padding-bottom: 1px;
+    }
+    .inline:hover { color: var(--green-dark); border-color: var(--green-dark); }
+
+    footer {
+      margin-top: 80px;
+      padding: 36px 28px 32px;
+      background: var(--green-dark);
+    }
+    .footer-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .footer-copy { font-size: 12px; color: var(--green-muted); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a { font-size: 13px; color: var(--green-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--cream); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="wordmark">Harbour Labs</a>
+  <nav class="nav">
+    <a href="/about.html">About</a>
+    <a href="/products.html">Products</a>
+    <a href="/journal.html">Journal</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="eyebrow">Press</div>
+  <h1>Press &amp; media.</h1>
+  <p class="lede">For interviews, sample access, or anything else press-related, email <a href="mailto:support@harbourlabs.co" class="inline">support@harbourlabs.co</a>. We aim to reply within two business days.</p>
+
+  <h2>Company descriptions</h2>
+
+  <p class="desc-label">Short (one sentence)</p>
+  <p class="quoted">Harbour Labs is a Wyoming-based software studio that publishes Dinnrd, a meal-planning app for iPhone.</p>
+
+  <p class="desc-label">Standard (one paragraph)</p>
+  <p class="quoted">Harbour Labs is an independent software studio that designs and ships consumer iOS apps. Its first product is Dinnrd, a meal-planning app for households. The studio works on one product at a time and is funded by app subscriptions. Harbour Labs was founded in 2026 by Hamish, a software developer, and is registered as Harbour Labs LLC in Wyoming, United States.</p>
+
+  <h2>Quick facts</h2>
+
+  <dl class="facts">
+    <dt>Name</dt><dd>Harbour Labs LLC</dd>
+    <dt>Type</dt><dd>Wyoming Limited Liability Company</dd>
+    <dt>Founded</dt><dd>2026</dd>
+    <dt>Founder</dt><dd>Hamish</dd>
+    <dt>Website</dt><dd><a href="https://harbourlabs.co">harbourlabs.co</a></dd>
+    <dt>Products</dt><dd>Dinnrd (iOS, 2026) — <a href="https://dinnrd.com">dinnrd.com</a></dd>
+    <dt>Contact</dt><dd><a href="mailto:support@harbourlabs.co">support@harbourlabs.co</a></dd>
+  </dl>
+
+  <h2>Brand</h2>
+
+  <p>The Harbour Labs wordmark is set in Georgia, the same typeface as the headings on this site. For high-resolution logo files, product screenshots, or other brand assets, email <a href="mailto:support@harbourlabs.co" class="inline">support@harbourlabs.co</a>.</p>
+
+  <p class="desc-label" style="margin-top: 20px;">Brand colors</p>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch-color" style="background: #1D4D2E;"></div>
+      <div class="swatch-text">
+        <div class="swatch-name">Harbour green</div>
+        <div class="swatch-hex">#1D4D2E</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: #C4622D;"></div>
+      <div class="swatch-text">
+        <div class="swatch-name">Harbour orange</div>
+        <div class="swatch-hex">#C4622D</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background: #FAF7F2; border: 1px solid var(--rule);"></div>
+      <div class="swatch-text">
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#FAF7F2</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">© 2026 Harbour Labs LLC</div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/products.html">Products</a>
+      <a href="/journal.html">Journal</a>
+      <a href="/press.html">Press</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

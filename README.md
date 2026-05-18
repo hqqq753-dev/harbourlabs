@@ -4,7 +4,12 @@ Static website for Harbour Labs LLC, hosted on GitHub Pages at https://harbourla
 
 ## Files
 
-- `index.html` — home (hero, products, contact)
+- `index.html` — home (hero, currently, recent, company, contact)
+- `about.html` — about the studio
+- `products.html` — full product list (Dinnrd + upcoming)
+- `journal.html` — studio updates / blog
+- `press.html` — press kit (descriptions, facts, brand colors)
+- `contact.html` — full contact details
 - `privacy.html` — privacy policy
 - `terms.html` — terms of service
 - `404.html` — not-found page
@@ -14,7 +19,7 @@ Static website for Harbour Labs LLC, hosted on GitHub Pages at https://harbourla
 
 ## Editing
 
-Open the HTML files in any editor. No build step.
+Open any HTML file in an editor. No build step.
 
 To publish a change:
 
@@ -25,6 +30,12 @@ git push
 ```
 
 GitHub Pages rebuilds within ~60 seconds.
+
+## Adding a journal entry
+
+Open `journal.html`. Copy the existing `<article class="entry">…</article>` block and paste a new one above it. Update the date, title, and body. Commit, push.
+
+Optionally update the homepage `#recent` section to point at the newest entry.
 
 ## Domain
 

@@ -166,6 +166,50 @@
     }
     .dinnrd-link:hover { color: var(--orange); }
 
+    /* "→ Read more" link below preview sections */
+    .more-link {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--green-soft);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--green-soft);
+      padding-bottom: 1px;
+    }
+    .more-link:hover { color: var(--green-dark); border-color: var(--green-dark); }
+
+    /* ── Recent (journal preview) ────────────────────────────────────── */
+    #recent { border-top: 1px solid var(--rule); }
+    .entry-preview { margin-top: 28px; max-width: 620px; }
+    .entry-preview .entry-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .entry-preview h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      color: var(--green-dark);
+      font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: -0.3px;
+    }
+    .entry-preview h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .entry-preview h3 a:hover { color: var(--orange); }
+    .entry-preview .entry-excerpt {
+      font-size: 16.5px;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
     /* ── Company ─────────────────────────────────────────────────────── */
     #company { border-top: 1px solid var(--rule); }
 
@@ -256,24 +300,35 @@
 <header class="site-header">
   <a href="/" class="wordmark">Harbour Labs</a>
   <nav class="nav">
-    <a href="#products">Currently</a>
-    <a href="#company">Company</a>
-    <a href="#contact">Contact</a>
+    <a href="/about.html">About</a>
+    <a href="/products.html">Products</a>
+    <a href="/journal.html">Journal</a>
+    <a href="/contact.html">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
   <h1>Harbour Labs.</h1>
-  <p class="lede">A Wyoming LLC, formed 2026. The studio publishes <a href="https://dinnrd.com" class="dinnrd-link" target="_blank" rel="noopener">Dinnrd</a>, a meal-planning app for iPhone.</p>
+  <p class="lede">A Wyoming LLC, formed 2026. The studio publishes <a href="https://dinnrd.com" class="dinnrd-link" target="_blank" rel="noopener">Dinnrd</a>, a meal-planning app for iPhone. <a href="/about.html" class="more-link" style="margin-left: 4px;">About the studio →</a></p>
 </section>
 
 <section id="products">
   <div class="section-label">Currently</div>
   <div class="product-entry">
     <h3><a href="https://dinnrd.com" class="dinnrd-link" target="_blank" rel="noopener">Dinnrd</a></h3>
-    <p class="product-meta">iOS · 2026</p>
+    <p class="product-meta">iOS · 2026 · $4.99/month, 7-day trial</p>
     <p class="product-desc">A one-stop kitchen tool. Dinnrd plans your week's meals, uses up the food in your fridge before it spoils, and saves any recipe you scroll past — TikTok, Instagram, anywhere.</p>
-    <a href="https://dinnrd.com" class="product-link" target="_blank" rel="noopener">dinnrd.com →</a>
+    <a href="/products.html" class="more-link">All products →</a>
+  </div>
+</section>
+
+<section id="recent">
+  <div class="section-label">Recent</div>
+  <div class="entry-preview">
+    <div class="entry-date">May 18, 2026</div>
+    <h3><a href="/journal.html">Why Harbour Labs exists</a></h3>
+    <p class="entry-excerpt">A few months into building Dinnrd, it became obvious that the app needed a company behind it instead of just me. Three reasons.</p>
+    <a href="/journal.html" class="more-link">Read in the journal →</a>
   </div>
 </section>
 
@@ -282,6 +337,7 @@
   <dl class="notes-list">
     <dt>Founded</dt><dd>2026</dd>
     <dt>Structure</dt><dd>Wyoming LLC</dd>
+    <dt>Address</dt><dd>30 N Gould St, Ste N<br>Sheridan, WY 82801</dd>
   </dl>
 </section>
 
@@ -289,24 +345,22 @@
   <div class="section-label">Contact</div>
   <div class="contact-block">
     <a href="mailto:support@harbourlabs.co" class="contact-email">support@harbourlabs.co</a>
-    <p class="contact-address">
-      Harbour Labs LLC<br>
-      30 N Gould St, Ste N<br>
-      Sheridan, WY 82801<br>
-      United States
-    </p>
+    <p class="contact-address">Email reaches a real person, usually answered within two business days.</p>
+    <a href="/contact.html" class="more-link" style="margin-top: 20px;">Full contact details →</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-line">
-    <a href="mailto:support@harbourlabs.co">support@harbourlabs.co</a>
-    <span class="sep">·</span>
-    <a href="/privacy.html">Privacy</a>
-    <span class="sep">·</span>
+    <a href="/about.html">About</a><span class="sep">·</span>
+    <a href="/products.html">Products</a><span class="sep">·</span>
+    <a href="/journal.html">Journal</a><span class="sep">·</span>
+    <a href="/press.html">Press</a><span class="sep">·</span>
+    <a href="/contact.html">Contact</a><span class="sep">·</span>
+    <a href="/privacy.html">Privacy</a><span class="sep">·</span>
     <a href="/terms.html">Terms</a>
-    <span class="sep">·</span>
-    © 2026 Harbour Labs LLC
+    <br>
+    <span style="margin-top: 8px; display: inline-block; opacity: 0.7;">© 2026 Harbour Labs LLC · support@harbourlabs.co</span>
   </div>
 </footer>
 
